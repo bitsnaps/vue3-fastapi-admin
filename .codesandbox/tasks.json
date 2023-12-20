@@ -2,12 +2,12 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "command": "pip install -r requirements.txt",
-      "name": "Setup backend"
+      "name": "Setup backend",
+      "command": "pip install -r requirements.txt"
     },
     {
-      "command": "cd web && pnpm i",
-      "name": "Setup frontend"
+      "name": "Setup frontend",
+      "command": "cd web && pnpm i"
     }
   ],
 
@@ -21,7 +21,10 @@
     "frontend run": {
       "name": "Start development server",
       "command": "cd web && pnpm dev",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 3100
+      }
     }
   }
 }

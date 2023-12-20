@@ -19,7 +19,7 @@
 - **细粒度权限控制**：实现按钮和接口级别的权限控制，确保不同用户或角色在界面操作和接口访问时具有不同的权限限制。
 
 ### 在线预览
-- http://139.9.100.77:9999
+- http://139.9.100.77:8080
 - username: admin
 - password: 123456
 
@@ -50,7 +50,7 @@
 
 ```sh
 docker pull mizhexiaoxiao/vue-fastapi-admin:latest 
-docker run -d --restart=always --name=vue-fastapi-admin -p 9999:80 mizhexiaoxiao/vue-fastapi-admin
+docker run -d --restart=always --name=vue-fastapi-admin -p 8080:80 mizhexiaoxiao/vue-fastapi-admin
 ```
 
 #### 方法二：dockerfile构建镜像
@@ -72,12 +72,12 @@ docker build --no-cache . -t vue-fastapi-admin
 ##### 启动容器
 
 ```sh
-docker run -d --restart=always --name=vue-fastapi-admin -p 9999:80 vue-fastapi-admin
+docker run -d --restart=always --name=vue-fastapi-admin -p 8080:80 vue-fastapi-admin
 ```
 
 ##### 访问
 
-http://localhost:9999
+http://localhost:8080
 
 username：admin
 
@@ -101,7 +101,7 @@ poetry install
 ```sh
 make run
 ```
-服务现在应该正在运行，访问 http://localhost:9999/docs 查看API文档
+服务现在应该正在运行，访问 http://localhost:8080/docs 查看API文档
 
 #### 前端
 启动项目需要以下环境：
