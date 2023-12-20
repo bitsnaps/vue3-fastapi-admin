@@ -2,20 +2,25 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "command": "poetry shell",
-      "name": "p"
+      "command": "pip install -r requirements.txt",
+      "name": "Setup backend"
     },
     {
-      "command": "poetry install",
-      "name": "poetry install"
+      "command": "cd web && pnpm i",
+      "name": "Setup frontend"
     }
   ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "make run": {
-      "name": "make run",
-      "command": "make run",
+    "backend run": {
+      "name": "run",
+      "command": "python run.py",
+      "runAtStart": true
+    },
+    "frontend run": {
+      "name": "Start development server",
+      "command": "cd web && pnpm dev",
       "runAtStart": true
     }
   }
